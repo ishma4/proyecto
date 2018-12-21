@@ -1,0 +1,67 @@
+table{
+		border:0px;
+		text-align: center;
+		}
+		tr, td {
+		border: 2px solid black;
+		}
+		.td1{
+		border-top-left-radius: 10px;
+		}
+		.td2{
+		border-top-right-radius: 10px;
+		}
+		.td3{
+		border-bottom-left-radius: 10px;
+		}
+		#td4{
+		border-bottom-right-radius: 10px;
+		}
+		.mate{
+		background-color: red;
+		}
+		.lengua{
+		background-color: blue ;
+		}
+		.ti{
+		background-color: orange;
+		}
+		.dibujo{
+		background-color: grey;
+		}
+		.tic{
+		background-color: purple;
+		}
+		.historia{
+		background-color: brown;
+		}
+		.ingles{
+		background-color: yellow;
+		}
+		.fisica{
+		background-color: green;
+		}
+		.noBorder1{
+		border: 0.1px solid white;
+		text-align: right;
+		}
+		.noBorder2{
+		border: 0.1px solid white;
+		text-align: center;
+		}
+		.noBorder{
+		border:0.1px solid white;
+		text-align: left;
+		}
+		li {
+		cursor: pointer;
+		}
+		span{
+		font-weight:bold;
+		color:red;
+		}
+		li: hover {
+		text-decoration:underline;
+		}
+
+		

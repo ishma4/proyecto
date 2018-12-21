@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title> Horario </title>
+		<link rel="stylesheet" href="proyecto.css" type="text/css" />
+		<script type="text/javascript">
+			function media(){
+			var nota1=document.getElementById('nota1');
+			var nota2=document.getElementById('nota2');
+			var nota3=document.getElementById('nota3');
+			var nota4=document.getElementById('nota4');
+			var nota5=document.getElementById('nota5');
+			var nota6=document.getElementById('nota6');
+			var nota7=document.getElementById('nota7');
+			var nota8=document.getElementById('nota8');
+			var num=0;
+			num=(nota1.value*1 + nota2.value*1 + nota3.value*1 + nota4.value*1 + nota5.value*1 + nota6.value*1 + nota7.value*1 + nota8.value*1)/8;
+			var resultado=Math.round(num*10)/10;
+			document.getElementById('media').innerHTML=resultado;
+				if(resultado<5){
+					document.getElementById('media').style.color="red";
+				} else {
+					document.getElementById('media').style.color="green";
+				}
+			}
+		</script>
+		<script>
+					function cambiar (tarea) {
+						var estado = document.getElementById (tarea);
+						if(estado.innerHTML === "[NO]") {
+							estado.innerHTML = "[SI]" ;
+							estado.style.color = '#00FF00';
+							
+						} else {
+							estado.innerHTML ="[NO]";
+							estado.style.color = '#FF0000';
+						
+						}
+					}
+		</script>
+		<script>
+			
+			function f(asignatura){
+				for (var i=0; i<5; i++){
+					if(document.getElementsByClassName(asignatura)[i].style.fontWeight==="bold"){
+						document.getElementsByClassName(asignatura)[i].style.borderColor="black";
+							if(asignatura==='fisica'){
+								document.getElementsByClassName(asignatura)[i].style.background="green";
+							} else if(asignatura==='mate'){
+							document.getElementsByClassName(asignatura)[i].style.background="red";
+							} else if(asignatura==='lengua'){
+								document.getElementsByClassName(asignatura)[i].style.background="blue";
+							} else if(asignatura==='tic'){
+								document.getElementsByClassName(asignatura)[i].style.background="purple";
+							} else if(asignatura==='ti'){
+								document.getElementsByClassName(asignatura)[i].style.background="orange";
+							} else if(asignatura==='dibujo'){
+								document.getElementsByClassName(asignatura)[i].style.background="grey";
+							} else if(asignatura==='historia'){
+								document.getElementsByClassName(asignatura)[i].style.background="brown";
+							} else if(asignatura==='ingles'){
+								document.getElementsByClassName(asignatura)[i].style.background="yellow";
+							} 
+					document.getElementsByClassName(asignatura)[i].style.fontWeight="normal";
+					
+					}else{	
+						
+						
+							if(asignatura==='fisica'){
+							document.getElementsByClassName(asignatura)[i].style.borderColor="green";
+							} else if(asignatura==='mate'){
+							document.getElementsByClassName(asignatura)[i].style.borderColor="red";
+							} else if(asignatura==='lengua'){
+								document.getElementsByClassName(asignatura)[i].style.borderColor="blue";
+							} else if(asignatura==='tic'){
+								document.getElementsByClassName(asignatura)[i].style.borderColor="purple";
+							} else if(asignatura==='ti'){
+								document.getElementsByClassName(asignatura)[i].style.borderColor="orange";
+							} else if(asignatura==='dibujo'){
+								document.getElementsByClassName(asignatura)[i].style.borderColor="grey";
+							} else if(asignatura==='historia'){
+								document.getElementsByClassName(asignatura)[i].style.borderColor="brown";
+							} else if(asignatura==='ingles'){
+								document.getElementsByClassName(asignatura)[i].style.borderColor="yellow";
+							} 
+						
+					document.getElementsByClassName(asignatura)[i].style.background="white";
+					document.getElementsByClassName(asignatura)[i].style.fontWeight="bold";
+					}
+					
+				}
+				
+			}
+			
+			function reset(){
+				for (var i=0; i<5; i++){
+							document.getElementsByClassName('fisica')[i].style.background="green";
+							document.getElementsByClassName('fisica')[i].style.borderColor="black";
+							document.getElementsByClassName('fisica')[i].style.fontWeight="normal";
+							document.getElementsByClassName('fisica')[i].style.visibility="visible";
+							document.getElementsByClassName('mate')[i].style.background="red";
+							document.getElementsByClassName('mate')[i].style.borderColor="black";
+							document.getElementsByClassName('mate')[i].style.fontWeight="normal";
+							document.getElementsByClassName('mate')[i].style.visibility="visible";
+							document.getElementsByClassName('lengua')[i].style.background="blue";
+							document.getElementsByClassName('lengua')[i].style.borderColor="black";
+							document.getElementsByClassName('lengua')[i].style.fontWeight="normal";
+							document.getElementsByClassName('lengua')[i].style.visibility="visible";
+							document.getElementsByClassName('tic')[i].style.background="purple";
+							document.getElementsByClassName('tic')[i].style.borderColor="black";
+							document.getElementsByClassName('tic')[i].style.fontWeight="normal";
+							document.getElementsByClassName('tic')[i].style.visibility="visible";
+							document.getElementsByClassName('ti')[i].style.background="orange";
+							document.getElementsByClassName('ti')[i].style.borderColor="black";
+							document.getElementsByClassName('ti')[i].style.fontWeight="normal";
+							document.getElementsByClassName('ti')[i].style.visibility="visible";
+							document.getElementsByClassName('dibujo')[i].style.background="grey";
+							document.getElementsByClassName('dibujo')[i].style.borderColor="black";
+							document.getElementsByClassName('dibujo')[i].style.fontWeight="normal";
+							document.getElementsByClassName('dibujo')[i].style.visibility="visible";
+							document.getElementsByClassName('historia')[i].style.background="brown";
+							document.getElementsByClassName('historia')[i].style.borderColor="black";
+							document.getElementsByClassName('historia')[i].style.fontWeight="normal";
+							document.getElementsByClassName('historia')[i].style.visibility="visible";
+							document.getElementsByClassName('ingles')[i].style.background="yellow";
+							document.getElementsByClassName('ingles')[i].style.borderColor="black";
+							document.getElementsByClassName('ingles')[i].style.fontWeight="normal";
+							document.getElementsByClassName('ingles')[i].style.visibility="visible";
+							document.getElementsByClassName('dibujo')[3].style.background="grey";
+							document.getElementsByClassName('dibujo')[3].style.borderColor="black";
+							document.getElementsByClassName('dibujo')[3].style.fontWeight="normal";
+							document.getElementsByClassName('dibujo')[3].style.visibility="visible";
+							document.getElementsByClassName('historia')[3].style.background="brown";
+							document.getElementsByClassName('historia')[3].style.borderColor="black";
+							document.getElementsByClassName('historia')[3].style.fontWeight="normal";
+							document.getElementsByClassName('historia')[3].style.visibility="visible";
+							document.getElementsByClassName('ti')[3].style.background="orange";
+							document.getElementsByClassName('ti')[3].style.borderColor="black";
+							document.getElementsByClassName('ti')[3].style.fontWeight="normal";
+							document.getElementsByClassName('ti')[3].style.visibility="visible";
+						}
+					}
+			
+		</script>
+		<script type="text/javaScript">
+			function muestraDia() {
+				var hoy = new Date ();
+				var dia = hoy.getDay();
+				
+				
+				if(dia==1) {
+					document.getElementById('lunes').style.border="4px solid red";
+					document.getElementById('lunes').style.fontWeight="bold";
+				}
+				if(dia==2) {
+					document.getElementById('martes').style.border="4px solid red";
+					document.getElementById('martes').style.fontWeight="bold";
+				}	
+				if(dia==3) {
+					document.getElementById('miercoles').style.border="4px solid red";
+					document.getElementById('miercoles').style.fontWeight="bold";
+				}	
+				if(dia==4) {
+					document.getElementById('jueves').style.border="4px solid red";
+					document.getElementById('jueves').style.fontWeight="bold";
+				}	
+				if(dia==5) {
+					document.getElementById('viernes').style.border="4px solid red";
+					document.getElementById('viernes').style.fontWeight="bold";
+				}	
+				
+			}
+		</script>	
+		<script>
+		function muestraTrimestre() {
+				var hoy = new Date ();
+				var mes = hoy.getMonth();
+				
+				
+				if(mes==8||mes==9||mes==10||mes==11) {
+					document.getElementById('trimestre').innerHTML="1ªevaluación";
+				}	
+				if(mes==0||mes==1||mes==2) {
+					document.getElementById('trimestre').innerHTML="2ªevaluación";
+				}	
+				if(mes==3||mes==4||mes==5) {
+					document.getElementById('trimestre').innerHTML="3ªevaluación";
+				}	
+				if(mes==6||mes==7) {
+					document.getElementById('trimestre').innerHTML="VERANOOO";
+				}	
+				
+			}
+		function configuracion(){
+			muestraDia();
+			muestraTrimestre();
+		}
+		</script>
+		<script>
+		
+		function esconderHoras(){
+						
+			var hoy = new Date ();
+			var d = hoy.getDay();
+			var h = hoy.getHours()+1;
+			var min = hoy.getMinutes()+h*60+1;
+			
+			
+			var clases=0;
+			if (min>9*60+20){
+				clases=1;
+			}
+			if (min>10*60+15){
+				clases=2;
+			}
+			if (min>11*60+10){
+				clases=3;
+			}
+			if (min>12*60+35){
+				clases=4;
+			}
+			if (min>13*60+25){
+				clases=5;
+			}
+			if (min>14*60+20){
+				clases=6;
+			}
+			var clasesAntesRecreo=clases;
+			if (clases>2){
+				clasesAntesRecreo=3;
+			}
+			for(i=0;i<clasesAntesRecreo;i++){
+				document.getElementsByTagName('td')[(i+1)*6+d].style.visibility="hidden";
+				}
+			for(i=3;i<clases;i++){
+				document.getElementsByTagName('td')[(i+1)*6+d+2].style.visibility="hidden";
+				}
+			if(clases<3){
+				document.getElementsByTagName('td')[(clases+1)*6+d].style.borderColor="blue";
+				document.getElementsByTagName('td')[(clases+1)*6+d].style.background="white";
+				document.getElementsByTagName('td')[(clases+1)*6+d].style.fontWeight="bold";
+			}
+			if(clases>2 && clases<6){
+				document.getElementsByTagName('td')[(clases+1)*6+d+2].style.borderColor="blue";
+				document.getElementsByTagName('td')[(clases+1)*6+d+2].style.background="white";
+				document.getElementsByTagName('td')[(clases+1)*6+d+2].style.fontWeight="bold";
+			}
+			
+		}
+		
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+			<script>
+				let snowflakes = []; // array que contiene todos los objetos de copos de nieve
+
+function setup() {
+  createCanvas(200, 200);
+  fill(240);
+  noStroke();
+}
+
+function draw() {
+  background('darkblue');
+  let t = frameCount / 60; // actualiza el tiempo
+
+  // por cada frame crea un numero de copos de nieve aleatoriamente
+  for (var i = 0; i < random(5); i++) {
+    snowflakes.push(new snowflake()); // crea objeto copo de nieve
+  }
+
+  // loop complejo sobre el objeto de los copos de nieve
+  for (let flake of snowflakes) {
+    flake.update(t); // actualiza las posiciones iniciales de los copos
+    flake.display(); // dibuja el copo de nieve
+	}
+}
+
+
+function snowflake() {
+  // inicialización
+  this.posX = 0;
+  this.posY = random(-50, 0);
+  this.initialangle = random(0, 2 * PI);
+  this.size = random(2, 5);
+  // algoritmo para esparcir de forma no uniforme los copos de nieve
+  this.radius = sqrt(random(pow(width / 2, 2)));
+
+  this.update = function(time) {
+	//los copos caen a distintas velocidades
+    let w = 0.6; 
+    let angle = w * time + this.initialangle;
+    this.posX = width / 2 + this.radius * sin(angle);
+    this.posY += pow(this.size, 0.5);
+
+    // borra el copo al llegar al final
+    if (this.posY > height) {
+      let index = snowflakes.indexOf(this);
+      snowflakes.splice(index, 1);
+    }
+  };
+
+  this.display = function() {
+    ellipse(this.posX, this.posY, this.size);
+  };
+}
+			
+			</script>
+	</head>
+	
+	<body onload="configuracion()">
+		<h1>Horario</h1>
+		<h2 id="trimestre"></h2>
+		<table border="1">
+			<tr>
+				<td class="td1">Hora\Día</td>
+				<td id="lunes">Lunes</td>
+				<td id="martes">Martes</td>
+				<td id="miercoles">Miércoles</td>
+				<td id="jueves">Jueves</td>
+				<td id="viernes" class="td2">Viernes</td>
+			</tr>
+			<tr>
+				<td>8:30-9:20</td>
+				<td class="fisica" >Física</td>
+				<td class="mate">Mate</td>
+				<td class="lengua">Lengua</td>
+				<td class="mate">Mate</td>
+				<td class="ti">TI</td>
+			</tr>
+			<tr>
+				<td>9:25-10:15</td>
+				<td class="ti">TI</td>
+				<td	class="ingles">Inglés</td>
+				<td class="ti">TI</td>
+				<td class="dibujo">Dibujo</td>
+				<td class="ingles">Inglés</td>
+			</tr>
+			<tr>
+				<td>10:20-11:20</td>
+				<td class="mate" >Mate</td>
+				<td class="dibujo">Dibujo</td>
+				<td class="dibujo">Dibujo</td>
+				<td class="ti">TI</td>
+				<td class="fisica">Física</td>
+			</tr>
+			<tr>
+				<td>11:10-11:40</td>
+				<td colspan="5">RECREO</td>
+			<tr>
+				<td>11:40-12:30</td>
+				<td class="lengua">Lengua</td>
+				<td class="fisica">Física</td>
+				<td class="tic">TIC</td>
+				<td class="tic">TIC</td>
+				<td class="lengua">Lengua</td>
+			</tr>
+			<tr>
+				<td>12:35-13:25</td>
+				<td class="historia">Historia</td>
+				<td class="historia">Historia</td>
+				<td class="historia">Historia</td>
+				<td class="fisica">Física</td>
+				<td class="tic">TIC</td>
+			</tr>
+			<tr>
+				<td class="td3">13:30-14:20</td>
+				<td class="ingles">Inglés</td>
+				<td class="lengua">Lengua</td>
+				<td class="mate">Mate</td>
+				<td class="historia">Historia</td>
+				<td class="dibujo" id="td4">Dibujo</td>
+			</tr>			
+		</table>
+		<table border="0.1px solid white">
+			<tr>
+				<td class="noBorder2"> <button onclick="f('fisica')"> FISICA </button> </td>
+				<td class="noBorder2"> <button onclick="f('mate')"> MATE </button> </td>
+				<td class="noBorder2"><button onclick="f('dibujo')"> DIBUJO </button></td>
+				<td class="noBorder2"><button onclick="f('lengua')"> LENGUA </button></td>
+			</tr>
+			<tr>
+				<td class="noBorder2"><button onclick="f('historia')"> HISTORIA </button></td>
+				<td class="noBorder2"><button onclick="f('ingles')"> INGLES </button></td>
+				<td class="noBorder2"><button onclick="f('ti')"> TI </button></td>
+				<td class="noBorder2"><button onclick="f('tic')"> TIC </button></td>
+				
+			</tr>
+	
+			<tr>
+				<td class="noBorder2" colspan="2"><button onclick="reset()"> RESET </button></td>
+				<td class="noBorder2" colspan="2"><button onclick="esconderHoras()"> HORAS RESTANTES </button></td>
+			</tr>
+		</table>
+		<br>
+		<h1>Notas asignaturas</h1>
+		<hr>
+		<table class="noBorder">
+			<tr>
+				<td class="noBorder1">Mate:</td>
+				<td class="noBorder"><input type="number" id="nota1"></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">Lengua:</td>
+				<td class="noBorder"><input type="number" id="nota2"></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">Inglés:</td>
+				<td class="noBorder"><input type="number" id="nota3"></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">Historia:</td>
+				<td class="noBorder"><input type="number" id="nota4"></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">TI:</td>
+				<td class="noBorder"><input type="number" id="nota5"></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">TIC:</td>
+				<td class="noBorder"><input type="number" id="nota6"></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">Dibujo:</td>
+				<td class="noBorder"><input type="number" id="nota7"></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">Física:</td>
+				<td class="noBorder"><input type="number" id="nota8"></td>
+			</tr>
+			<tr>
+				<td class="noBorder2" colspan="2">
+				<button onclick="media()">Calcular</button></td>
+			</tr>
+			<tr>
+				<td class="noBorder1">Nota media: </td>
+				<td class="noBorder"><span id="media"> </span></td>
+			</tr>
+			</hr>
+		</table>
+		<br/>
+		<br/>
+		<h1> Deberes hechos</h1>
+		<hr>
+		<div>
+			<ul>
+				<li onclick="cambiar ('t1')"> <span id="t1"> [NO]</span> Lengua</li>
+				<li onclick="cambiar ('t2')"> <span id="t2"> [NO]</span> Mate</li>
+				<li onclick="cambiar ('t3')"> <span id="t3"> [NO]</span> Fisica</li>
+				<li onclick="cambiar ('t4')"> <span id="t4"> [NO]</span> Dibujo</li>
+				<li onclick="cambiar ('t5')"> <span id="t5"> [NO]</span> Historia</li>
+				<li onclick="cambiar ('t6')"> <span id="t6"> [NO]</span> TI</li>
+				<li onclick="cambiar ('t7')"> <span id="t7"> [NO]</span> TIC</li>
+				<li onclick="cambiar ('t8')"> <span id="t8"> [NO]</span> Inglés</li>
+			</ul>
+		</div>
+		</hr>
+		<br/>
+		<h1>FELIZ NAVIDAD</h1>
+		
+		
+
+	</body>
+</html>
