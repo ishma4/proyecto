@@ -3,9 +3,11 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title> Horario </title>
+		<h2> Trabajo realizado por Gabriel Valles y Lucía Gutiérrez 2ºBach</h2>
+		<h3> Proyecto final horario completo </h3>
 		<link rel="stylesheet" href="proyecto.css" type="text/css" />
 		<script type="text/javascript">
-			function media(){
+			function media(){//esta función calcula la media y tiene tantas variables como asignaturas hay 
 			var nota1=document.getElementById('nota1');
 			var nota2=document.getElementById('nota2');
 			var nota3=document.getElementById('nota3');
@@ -15,7 +17,7 @@
 			var nota7=document.getElementById('nota7');
 			var nota8=document.getElementById('nota8');
 			var num=0;
-			num=(nota1.value*1 + nota2.value*1 + nota3.value*1 + nota4.value*1 + nota5.value*1 + nota6.value*1 + nota7.value*1 + nota8.value*1)/8;
+			num=(nota1.value*1 + nota2.value*1 + nota3.value*1 + nota4.value*1 + nota5.value*1 + nota6.value*1 + nota7.value*1 + nota8.value*1)/8;//operación matemática para calcular la media
 			var resultado=Math.round(num*10)/10;
 			document.getElementById('media').innerHTML=resultado;
 				if(resultado<5){
@@ -26,7 +28,7 @@
 			}
 		</script>
 		<script>
-					function cambiar (tarea) {
+					function cambiar (tarea) {//funcion para determinar si una tarea está hecha o no
 						var estado = document.getElementById (tarea);
 						if(estado.innerHTML === "[NO]") {
 							estado.innerHTML = "[SI]" ;
@@ -41,7 +43,7 @@
 		</script>
 		<script>
 			
-			function f(asignatura){
+			function f(asignatura){//resalta el dia actual encuadrandolo en un cuadrado rojo
 				for (var i=0; i<5; i++){
 					if(document.getElementsByClassName(asignatura)[i].style.fontWeight==="bold"){
 						document.getElementsByClassName(asignatura)[i].style.borderColor="black";
@@ -94,7 +96,7 @@
 			}
 			
 			function reset(){
-				for (var i=0; i<5; i++){
+				for (var i=0; i<5; i++){//cambia los estilos al estado inicial
 							document.getElementsByClassName('fisica')[i].style.background="green";
 							document.getElementsByClassName('fisica')[i].style.borderColor="black";
 							document.getElementsByClassName('fisica')[i].style.fontWeight="normal";
@@ -144,7 +146,7 @@
 			
 		</script>
 		<script type="text/javaScript">
-			function muestraDia() {
+			function muestraDia() {//resalta el dia actual encuadrandolo en un cuadrado rojo
 				var hoy = new Date ();
 				var dia = hoy.getDay();
 				
@@ -173,7 +175,7 @@
 			}
 		</script>	
 		<script>
-		function muestraTrimestre() {
+		function muestraTrimestre() {//en funcion del trimestre que sea en la cabecera aparece 1ª, 2ª,3ª evaluación o verano
 				var hoy = new Date ();
 				var mes = hoy.getMonth();
 				
@@ -192,14 +194,14 @@
 				}	
 				
 			}
-		function configuracion(){
+		function configuracion(){//esta función permite mostrar en la pagina web el trimestre que es actualmente y remarcar el dia actual
 			muestraDia();
 			muestraTrimestre();
 		}
 		</script>
 		<script>
 		
-		function esconderHoras(){
+		function esconderHoras(){//oculta las horas ya realizadas en el dia y remarca la hora actual en un cuadrado azul
 						
 			var hoy = new Date ();
 			var d = hoy.getDay();
@@ -308,10 +310,10 @@ function snowflake() {
 			</script>
 	</head>
 	
-	<body onload="configuracion()">
+	<body onload="configuracion()"><!-- ejecuta el script -->
 		<h1>Horario</h1>
-		<h2 id="trimestre"></h2>
-		<table border="1">
+		<h2 id="trimestre"></h2><!--horario en html -->
+		<table border="1"><!-- filas -->
 			<tr>
 				<td class="td1">Hora\Día</td>
 				<td id="lunes">Lunes</td>
@@ -372,7 +374,7 @@ function snowflake() {
 				<td class="dibujo" id="td4">Dibujo</td>
 			</tr>			
 		</table>
-		<table border="0.1px solid white">
+		<table border="0.1px solid white"> <!-- se asocia un idenificar a cada asignatura para calcular la nota media, introduciendo unos valores cualquiera-->
 			<tr>
 				<td class="noBorder2"> <button onclick="f('fisica')"> FISICA </button> </td>
 				<td class="noBorder2"> <button onclick="f('mate')"> MATE </button> </td>
@@ -430,7 +432,7 @@ function snowflake() {
 			</tr>
 			<tr>
 				<td class="noBorder2" colspan="2">
-				<button onclick="media()">Calcular</button></td>
+				<button onclick="media()">Calcular</button></td><!-- al presionar el boton calcular se calcula la media de las notas -->
 			</tr>
 			<tr>
 				<td class="noBorder1">Nota media: </td>
@@ -440,7 +442,8 @@ function snowflake() {
 		</table>
 		<br/>
 		<br/>
-		<h1> Deberes hechos</h1>
+		<h1> Deberes hechos</h1><!-- una lista en la que aparecen las tareas de cada asignatura que hay que hacer, al principio están todas sin hacer (NO) pero debido a la funcion cambiar al hacer clic se cambiar a (SI)pzra marcar que has realizado esa tarea-->
+
 		<hr>
 		<div>
 			<ul>
